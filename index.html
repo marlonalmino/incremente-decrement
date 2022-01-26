@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <title>Increment and Decrement</title>
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center;">
+
+  <span id="number" style="font-size: 100pt; width: 134px; text-align: right; font-family: Arial">0</span>
+
+  <div style="padding-left: 20px;">
+    <div><button onclick="increment()" style="
+      font-size: 20pt;
+      width: 40px;
+      height: 40px;
+      border-radius: 1.01rem;
+      ">+</button></div>
+
+    <div><button onclick="decrement()" style="
+      font-size: 20pt;
+      width: 40px;
+      height: 40px;
+      border-radius: 1.01rem;
+      ">-</button></div>
+  </div>
+
+  <script language="javascript">
+
+    function increment() {
+      let number = parseInt(document.querySelector('#number').innerText)
+      document.querySelector("#number").innerText = number + 1
+
+    }
+
+    function decrement() {
+      let number = document.querySelector('#number').innerText
+      if (number != 0) {
+        document.querySelector("#number").innerText = number - 1
+      }
+    }
+  </script>
+
+  <!-- <div class="allElements">
+    <input type="text" id="number" readonly value="0">
+    <button id="increment" onclick="increment()">+</button>
+    <button id="decrement" onclick="decrement()">-</button>
+  </div>
+
+  <script language="javascript">
+    function increment() {
+      let number = parseInt(document.getElementById("number").value)
+      document.getElementById('number').value = number + 1
+    }
+
+    function decrement() {
+      let number = parseInt(document.getElementById("number").value)
+      if (number != 0) {
+        document.getElementById('number').value = number - 1
+      }
+    }
+  </script> -->
+</body>
+
+</html>
